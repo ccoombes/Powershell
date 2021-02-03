@@ -1,3 +1,15 @@
+<#
+.DESCRIPTION
+  Enable WinRM over HTTPS with a self signed certificate.
+  Used for Ansible testing on Windows
+.NOTES
+  Version:        1.0
+  Author:         Chris Coombes
+  Email:          ccoombes@outlook.com
+  Creation Date:  03-02-2021
+  Purpose/Change: Initial script development
+#>
+
 #setup host to use HTTPS remoting with selfsigned cert
 
 $hostname = "xxxxx"

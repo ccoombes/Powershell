@@ -1,4 +1,13 @@
-#Basic smtp script for for testing SMTP
+<#
+.DESCRIPTION
+  Basic smtp script for for testing SMTP server connectivity
+.NOTES
+  Version:        1.0
+  Author:         Chris Coombes
+  Email:          ccoombes@outlook.com
+  Creation Date:  03-02-2021
+  Purpose/Change: Initial script development
+#>
 
 $content = "Random String "+$timestamp
 
