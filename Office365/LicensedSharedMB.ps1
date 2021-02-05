@@ -8,5 +8,4 @@
   Creation Date:  28-1-2021
   Purpose/Change: Initial script development
 #>
-
 Get-Mailbox -RecipientTypeDetails shared | Get-MsolUser | Where-Object islicensed -eq $true

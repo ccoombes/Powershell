@@ -8,7 +8,6 @@
   Creation Date:  03-02-2021
   Purpose/Change: Initial script development
 #>
-
 $content = "Random String "+$timestamp
 
 $splat = @{

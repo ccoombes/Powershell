@@ -8,7 +8,6 @@
   Creation Date:  01-01-2021
   Purpose/Change: Initial script development
 #>
-
 $computer = "."
 $lastboottime = (Get-WmiObject -Class Win32_OperatingSystem -computername $computer).LastBootUpTime
 $sysuptime = (Get-Date) – [System.Management.ManagementDateTimeconverter]::ToDateTime($lastboottime)

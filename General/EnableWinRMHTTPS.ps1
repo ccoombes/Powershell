@@ -9,9 +9,6 @@
   Creation Date:  03-02-2021
   Purpose/Change: Initial script development
 #>
-
-#setup host to use HTTPS remoting with selfsigned cert
-
 $hostname = "xxxxx"
 
 #generate new selfsigned cert        
