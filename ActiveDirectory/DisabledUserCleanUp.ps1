@@ -19,13 +19,11 @@ function Save-ADGroupMembership {
        
     }
     Write-Output $output
-    $output | Export-CSV -Path "\\hps.local\public\Powershell\Files\Active Directory\DisabledUserGroupMembership.csv" -Append -Force -NoTypeInformation
+    $output | Export-CSV -Path ".\DisabledUserGroupMembership.csv" -Append -Force -NoTypeInformation
 }
 
 $OUs = @(
-    'OU=Disabled Users,OU=Users,OU=HPV Users,DC=hps,DC=local'
-    'OU=HPS Disabled User accounts,DC=hps,DC=local'
-    'OU=Disabled Users,OU=HPS Users,DC=hps,DC=local'
+    'OU=Disabled Users,OU=Users,DC=Contoso,DC=Com'
 )
 
 $users = $OUs | ForEach-Object {Get-ADUser -Filter * -SearchBase $_}

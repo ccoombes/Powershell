@@ -7,9 +7,9 @@ $DomainName = (Get-ADDomain).DNSRoot
 # Setup email parameters
 $subject = "Domain Controllers in $DomainName"
 $priority = "Normal"
-$smtpServer = "email.pmplimited.com.au"
-$emailFrom = "no-reply@ovato.com.au"
-$emailTo = "chris.coombes@ovato.com.au"
+$smtpServer = "email.xyz.com"
+$emailFrom = "no-reply@xyz.com"
+$emailTo = "user@xyz.com"
 $port = 25
  
 # Get all DC's
