@@ -1,4 +1,4 @@
-$computers = 'cdcfile-1.pmplimited.com.au','cdcdsql.pmplimited.com.au','pmpbfr-2.pmplimited.com.au','jdesql-1.pmplimited.com.au'
+$computers = '.'
 
 #$creds = (Get-Credential)
 
@@ -43,6 +43,7 @@ $output = Foreach ($Computer in $Computers)
     $OperatingSystem = Get-WmiObject win32_OperatingSystem -computer $computer -Credential $creds
     $FreeMemory = $OperatingSystem.FreePhysicalMemory
     $TotalMemory = $OperatingSystem.TotalVisibleMemorySize
+    $TotalVMemory = $OperatingSystem.TotalVirtualMemorySize
     $MemoryUsed = $TotalMemory - $FreeMemory 
 
     $OS = (gwmi win32_operatingsystem -computer $computer -Credential $creds).Caption
@@ -62,6 +63,7 @@ $output = Foreach ($Computer in $Computers)
         'TotalCPU' = $TotalCPU
         'TotalCPUCores' = $TotalCPUCores
         'TotalMemory(GB)' = ([Math]::Round($TotalMemory /1MB,0))
+        'TotalVirtualMemory(GB)' = ([Math]::Round($TotalVMemory /1MB,0))
         'UsedMemory(GB)' = ([Math]::Round($MemoryUsed /1MB,0))
         'TotalDisk(GB)' = ([Math]::Round($TotalSize_GB /1GB,0))
         'UsedDisk(GB)' = ([Math]::Round($UsedSpace_GB /1GB,0))

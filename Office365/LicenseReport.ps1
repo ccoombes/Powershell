@@ -128,6 +128,3 @@ $postcontent = @"
 <h3>Microsoft SKU Summary</h3>
 <a href="https://docs.microsoft.com/en-us/azure/active-directory/enterprise-users/licensing-service-plan-reference">Product names and service plan identifiers</a>
 "@
-
-#Start-OVTO365LicenseReport -Email chris.coombes@ovato.com.au
-#. "C:\Scripts\ConnectO365Services.ps1" -Services AzureAD,ExchangeOnline -UserName "svcprod.automationo365@pmplimited.com.au" -Password "7MBZxWk#ypLfonx9!"
